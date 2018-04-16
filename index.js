@@ -74,7 +74,7 @@ class Employer {
 
   deliveries(){
     let allDeliveries = this.employees().map(employee => {return employee.deliveries()});
-    let merged = [...merged, ...allDeliveries};
+    let merged = [...[], ...allDeliveries};
     return merged;
   }
 
