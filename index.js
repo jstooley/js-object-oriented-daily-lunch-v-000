@@ -47,12 +47,11 @@ class Customer {
 
     store.customers.push(this);
   };
-
-  meals() {
-  return this.deliveries().map(delivery => {return delivery.meal()});
-  };
   deliveries(){
     return store.deliveries.filter(delivery => {return delivery.customerId === this.id});
+  };
+  meals() {
+  return this.deliveries().map(delivery => {return delivery.meal()});
   };
   totalSpent(){
     return this.meals().reduce(function(total, currentMeal) {
